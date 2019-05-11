@@ -1,4 +1,4 @@
-import { TEST_INCREMENT, TEST_SET_WORD } from "../contstants"
+import { TEST_INCREMENT, TEST_SET_WORD } from '../contstants';
 
 const initialState = {
   testCount: 0,
