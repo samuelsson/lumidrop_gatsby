@@ -26,8 +26,7 @@ const Test = ({
 
     <h2>Test Counter</h2>
     <p>
-      Test counter is:
-      { testCount }
+      Test counter is: { testCount }
     </p>
     <button type="button" onClick={() => increment()}>
       increment
@@ -35,8 +34,7 @@ const Test = ({
 
     <h2>Test Set Word</h2>
     <p>
-      Test word is:
-      { testWord }
+      Test word is: { testWord }
     </p>
     <button type="button" onClick={() => setWord('okay :)')}>
       set word
@@ -46,9 +44,9 @@ const Test = ({
 
 Test.propTypes = {
   testCount: PropTypes.node.isRequired,
-  increment: PropTypes.node.isRequired,
+  increment: PropTypes.func.isRequired,
   testWord: PropTypes.node.isRequired,
-  setWord: PropTypes.node.isRequired
+  setWord: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Test);

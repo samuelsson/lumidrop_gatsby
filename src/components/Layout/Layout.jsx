@@ -9,14 +9,14 @@ const Layout = ({ children }) => (
   <div className="wrapper">
     <Header />
     <div className={styles.content}>
-      {children}
+      { children }
     </div>
     <Footer />
   </div>
 );
 
 Layout.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;
