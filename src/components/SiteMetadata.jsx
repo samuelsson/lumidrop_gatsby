@@ -7,7 +7,7 @@ const SiteMetadata = ({ pageTitle }) => {
   const {
     site: {
       siteMetadata: { title }
-    },
+    }
   } = useStaticQuery(graphql`
     query SiteMetadata {
       site {
@@ -30,7 +30,7 @@ SiteMetadata.propTypes = {
 };
 
 SiteMetadata.defaultProps = {
-  pageTitle: '',
+  pageTitle: ''
 };
 
 export default SiteMetadata;

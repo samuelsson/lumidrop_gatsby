@@ -1,7 +1,7 @@
 {
   "extends": "airbnb",
   "rules": {
-    "comma-dangle": "off",
+    "comma-dangle": ["error", "never"],
     "react/jsx-one-expression-per-line": "off"
   }
 }
