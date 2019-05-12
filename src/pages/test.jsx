@@ -21,7 +21,7 @@ const Test = ({
   testWord,
   setWord
 }) => (
-  <Layout>
+  <Layout pageTitle="test">
     <h1>Testing state</h1>
 
     <h2>Test Counter</h2>
@@ -43,9 +43,9 @@ const Test = ({
 );
 
 Test.propTypes = {
-  testCount: PropTypes.node.isRequired,
+  testCount: PropTypes.number.isRequired,
   increment: PropTypes.func.isRequired,
-  testWord: PropTypes.node.isRequired,
+  testWord: PropTypes.string.isRequired,
   setWord: PropTypes.func.isRequired
 };
 
