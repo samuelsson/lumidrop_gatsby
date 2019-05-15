@@ -2,7 +2,7 @@ import { TEST_INCREMENT, TEST_SET_WORD } from '../types';
 
 const initialState = {
   testCount: 0,
-  testWord: 'change me please!'
+  testWord: 'change me please!',
 };
 
 export default (state = initialState, action) => {

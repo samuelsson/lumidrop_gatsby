@@ -11,7 +11,7 @@ const ReduxWrapper = ({ element }) => (
 );
 
 ReduxWrapper.propTypes = {
-  element: PropTypes.element.isRequired
+  element: PropTypes.element.isRequired,
 };
 
 export default ReduxWrapper;

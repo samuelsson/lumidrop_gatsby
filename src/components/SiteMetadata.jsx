@@ -6,8 +6,8 @@ import * as PropTypes from 'prop-types';
 const SiteMetadata = ({ pageTitle }) => {
   const {
     site: {
-      siteMetadata: { title }
-    }
+      siteMetadata: { title },
+    },
   } = useStaticQuery(graphql`
     query SiteMetadata {
       site {
@@ -26,11 +26,11 @@ const SiteMetadata = ({ pageTitle }) => {
 };
 
 SiteMetadata.propTypes = {
-  pageTitle: PropTypes.string
+  pageTitle: PropTypes.string,
 };
 
 SiteMetadata.defaultProps = {
-  pageTitle: ''
+  pageTitle: '',
 };
 
 export default SiteMetadata;

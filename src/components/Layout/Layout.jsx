@@ -19,11 +19,11 @@ const Layout = ({ pageTitle, children }) => (
 
 Layout.propTypes = {
   pageTitle: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Layout.defaultProps = {
-  pageTitle: ''
+  pageTitle: '',
 };
 
 export default Layout;
