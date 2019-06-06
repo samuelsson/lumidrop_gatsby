@@ -1,13 +1,15 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createStore as reduxCreateStore } from 'redux';
+import { createStore } from 'redux';
 import * as PropTypes from 'prop-types';
-import rootReducer from './reducers/rootReducer';
+import rootReducer from './store/reducers/rootReducer';
 
-const createStore = () => reduxCreateStore(rootReducer);
+const store = createStore(rootReducer);
 
 const ReduxWrapper = ({ element }) => (
-  <Provider store={createStore()}>{element}</Provider>
+  <Provider store={store}>
+    {element}
+  </Provider>
 );
 
 ReduxWrapper.propTypes = {
