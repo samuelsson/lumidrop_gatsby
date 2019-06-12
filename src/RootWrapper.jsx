@@ -6,14 +6,14 @@ import rootReducer from './store/reducers/rootReducer';
 
 const store = createStore(rootReducer);
 
-const ReduxWrapper = ({ element }) => (
+const RootWrapper = ({ element }) => (
   <Provider store={store}>
     {element}
   </Provider>
 );
 
-ReduxWrapper.propTypes = {
+RootWrapper.propTypes = {
   element: PropTypes.element.isRequired,
 };
 
-export default ReduxWrapper;
+export default RootWrapper;

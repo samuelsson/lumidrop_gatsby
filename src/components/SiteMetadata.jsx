@@ -6,13 +6,14 @@ import * as PropTypes from 'prop-types';
 const SiteMetadata = ({ pageTitle }) => {
   const {
     site: {
-      siteMetadata: { title },
+      siteMetadata: { title, lang },
     },
   } = useStaticQuery(graphql`
     query SiteMetadata {
       site {
         siteMetadata {
           title
+          lang
         }
       }
     }
@@ -21,6 +22,7 @@ const SiteMetadata = ({ pageTitle }) => {
   return (
     <Helmet defaultTitle={title} titleTemplate={`%s | ${title}`}>
       <title>{ pageTitle }</title>
+      <html lang={lang} />
     </Helmet>
   );
 };

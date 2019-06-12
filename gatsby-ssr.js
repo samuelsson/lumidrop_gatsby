@@ -1,4 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-import ReduxWrapper from './src/ReduxWrapper';
+import RootWrapper from './src/RootWrapper';
+import PageWrapper from './src/PageWrapper';
 
-export const wrapRootElement = ReduxWrapper;
+export const wrapRootElement = RootWrapper;
+export const wrapPageElement = PageWrapper;
