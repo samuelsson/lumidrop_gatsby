@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { TEST_INCREMENT, TEST_SET_WORD } from '../store/types';
-import Layout from '../components/Layout/Layout';
+import Layout from '../components/Layout';
 
 const Testing = () => {
   const testCount = useSelector(state => state.test.testCount);

@@ -1,19 +1,23 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import 'normalize.css';
-import styles from './Layout.module.scss';
-import SiteMetadata from '../SiteMetadata';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import styled from 'styled-components';
+import SiteMetadata from './SiteMetadata';
+import PageHeader from './PageHeader';
+import PageFooter from './PageFooter';
+
+const Main = styled.main`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
 
 const Layout = ({ pageTitle, children }) => (
-  <div className="wrapper">
+  <div>
     <SiteMetadata pageTitle={pageTitle} />
-    <Header />
-    <div className={styles.content}>
+    <PageHeader />
+    <Main>
       { children }
-    </div>
-    <Footer />
+    </Main>
+    <PageFooter />
   </div>
 );
 
