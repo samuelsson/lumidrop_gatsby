@@ -9,7 +9,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,13 @@
     "styled-normalize": "^8.0.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
     "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.1.11",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
