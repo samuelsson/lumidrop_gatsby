@@ -5,10 +5,6 @@ const Header = styled.div`
   padding: 15px;
 `;
 
-const PageHeader = () => (
-  <Header>
-    Header
-  </Header>
-);
+const PageHeader = (): JSX.Element => <Header>Header</Header>;
 
 export default PageHeader;

@@ -2,14 +2,13 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as PropTypes from 'prop-types';
-import rootReducer from './store/reducers/rootReducer';
+import { WrapRootElementBrowserArgs } from 'gatsby';
+import reducer from './store';
 
-const store = createStore(rootReducer);
+const store = createStore(reducer);
 
-const RootWrapper = ({ element }) => (
-  <Provider store={store}>
-    {element}
-  </Provider>
+const RootWrapper = ({ element }: WrapRootElementBrowserArgs): JSX.Element => (
+  <Provider store={store}>{element}</Provider>
 );
 
 RootWrapper.propTypes = {

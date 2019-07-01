@@ -1,2 +1,0 @@
-export const TEST_INCREMENT = 'TEST_INCREMENT';
-export const TEST_SET_WORD = 'TEST_SET_WORD';

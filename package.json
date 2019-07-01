@@ -8,11 +8,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "gatsby serve",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint ./ --ext .ts,.tsx,.js"
   },
+  "typings": "./src/types/*.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/samuelsson/lumidrop_gatsby"
@@ -21,9 +22,8 @@
     "@testing-library/react": "^8.0.3",
     "gatsby": "^2.10.5",
     "gatsby-plugin-react-helmet": "^3.1.0",
-    "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-styled-components": "^3.1.0",
-    "node-sass": "^4.12.0",
+    "gatsby-plugin-typescript": "^2.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -39,18 +39,28 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@types/jest": "^24.0.15",
+    "@types/react-helmet": "^5.0.8",
+    "@types/react-redux": "^7.1.1",
+    "@types/storybook__react": "^4.0.2",
+    "@types/styled-components": "^4.1.16",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.1.11",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-loader": "^2.1.2",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
-    "gatsby-plugin-eslint": "^2.0.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
-    "jest-dom": "^3.5.0"
+    "jest-dom": "^3.5.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
   }
 }

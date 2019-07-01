@@ -5,27 +5,31 @@ import SiteMetadata from './SiteMetadata';
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
 
+export const LayoutPropTypes = {
+  pageTitle: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
+export type LayoutProps = PropTypes.InferProps<typeof LayoutPropTypes>;
+
 const Main = styled.main`
   max-width: 1200px;
   margin: 0 auto;
 `;
 
-const Layout = ({ pageTitle, children }) => (
+const Layout: React.FunctionComponent<LayoutProps> = ({
+  pageTitle,
+  children,
+}): JSX.Element => (
   <div>
     <SiteMetadata pageTitle={pageTitle} />
     <PageHeader />
-    <Main>
-      { children }
-    </Main>
+    <Main>{children}</Main>
     <PageFooter />
   </div>
 );
 
-Layout.propTypes = {
-  pageTitle: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};
-
+Layout.propTypes = LayoutPropTypes;
 Layout.defaultProps = {
   pageTitle: '',
 };

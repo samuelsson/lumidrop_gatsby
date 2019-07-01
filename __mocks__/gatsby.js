@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 
 const gatsby = jest.requireActual('gatsby');
@@ -17,10 +17,11 @@ module.exports = {
       replace,
       to,
       ...rest
-    }) => React.createElement('a', {
-      ...rest,
-      href: to,
-    }),
+    }) =>
+      React.createElement('a', {
+        ...rest,
+        href: to,
+      })
   ),
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn(),

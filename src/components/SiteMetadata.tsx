@@ -3,7 +3,15 @@ import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as PropTypes from 'prop-types';
 
-const SiteMetadata = ({ pageTitle }) => {
+export const SiteMetadataPropTypes = {
+  pageTitle: PropTypes.string,
+};
+
+export type SiteMetadataProps = PropTypes.InferProps<
+  typeof SiteMetadataPropTypes
+>;
+
+const SiteMetadata = ({ pageTitle }: SiteMetadataProps): JSX.Element => {
   const {
     site: {
       siteMetadata: { title, lang },
@@ -21,16 +29,13 @@ const SiteMetadata = ({ pageTitle }) => {
 
   return (
     <Helmet defaultTitle={title} titleTemplate={`%s | ${title}`}>
-      <title>{ pageTitle }</title>
+      <title>{pageTitle}</title>
       <html lang={lang} />
     </Helmet>
   );
 };
 
-SiteMetadata.propTypes = {
-  pageTitle: PropTypes.string,
-};
-
+SiteMetadata.propTypes = SiteMetadataPropTypes;
 SiteMetadata.defaultProps = {
   pageTitle: '',
 };

@@ -1,11 +1,19 @@
-import { TEST_INCREMENT, TEST_SET_WORD } from '../types';
+import {
+  TEST_INCREMENT,
+  TEST_SET_WORD,
+  TestActionTypes,
+  TestState,
+} from './types';
 
-const initialState = {
+export const initialState: TestState = {
   testCount: 0,
   testWord: 'change me please!',
 };
 
-export default (state = initialState, action) => {
+const testReducer = (
+  state = initialState,
+  action: TestActionTypes
+): TestState => {
   switch (action.type) {
     case TEST_INCREMENT:
       return { ...state, testCount: state.testCount + 1 };
@@ -15,3 +23,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default testReducer;

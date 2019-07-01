@@ -5,10 +5,6 @@ const Footer = styled.footer`
   padding: 15px;
 `;
 
-const PageFooter = () => (
-  <Footer>
-    Footer
-  </Footer>
-);
+const PageFooter = (): JSX.Element => <Footer>Footer</Footer>;
 
 export default PageFooter;
