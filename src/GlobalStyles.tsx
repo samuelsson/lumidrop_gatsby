@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
     background-color: ${colors.white};
-    color: ${colors.black};
+    color: ${colors.gray[200]};
     font-size: 1em;
   }
 `;

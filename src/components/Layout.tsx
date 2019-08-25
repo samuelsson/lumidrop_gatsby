@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SiteMetadata from './SiteMetadata';
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
+import { variables } from '../styles';
 
 export const LayoutPropTypes = {
   pageTitle: PropTypes.string,
@@ -13,8 +14,9 @@ export const LayoutPropTypes = {
 export type LayoutProps = PropTypes.InferProps<typeof LayoutPropTypes>;
 
 const Main = styled.main`
-  max-width: 1200px;
+  max-width: ${variables.breakpoints.large};
   margin: 0 auto;
+  padding: calc(${variables.defaultPadding} * 2);
 `;
 
 const Layout: React.FunctionComponent<LayoutProps> = ({
@@ -24,7 +26,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
   <div>
     <SiteMetadata pageTitle={pageTitle} />
     <PageHeader />
-    <Main>{children}</Main>
+    <Main role="main">{children}</Main>
     <PageFooter />
   </div>
 );
