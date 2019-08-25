@@ -14,9 +14,9 @@ export const LayoutPropTypes = {
 export type LayoutProps = PropTypes.InferProps<typeof LayoutPropTypes>;
 
 const Main = styled.main`
-  max-width: ${variables.breakpoints.large};
+  max-width: ${variables.breakpoints.medium};
   margin: 0 auto;
-  padding: calc(${variables.defaultPadding} * 2);
+  padding: ${variables.defaultPadding};
 `;
 
 const Layout: React.FunctionComponent<LayoutProps> = ({

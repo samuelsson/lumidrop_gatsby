@@ -13,19 +13,26 @@ const StyledHeaderContainer = styled.header`
 const StyledHeader = styled.div`
   display: flex;
   margin: 0 auto;
-  width: ${variables.breakpoints.large};
+  max-width: ${variables.breakpoints.medium};
 `;
 
 const StyledLogoContainer = styled.div`
-  position: absolute;
-  left: ${variables.defaultPadding};
-  margin-right: ${variables.defaultPadding};
+  padding-right: ${variables.defaultPadding};
+
+  @media all and (min-width: ${variables.breakpoints.large}) {
+    position: absolute;
+    left: ${variables.defaultPadding};
+  }
 `;
 
 const StyledLoginInfo = styled.div`
-  position: absolute;
-  right: ${variables.defaultPadding};
-  margin-left: ${variables.defaultPadding};
+  padding-left: ${variables.defaultPadding};
+  margin-left: auto;
+
+  @media all and (min-width: ${variables.breakpoints.large}) {
+    position: absolute;
+    right: ${variables.defaultPadding};
+  }
 `;
 
 const PageHeader = (): JSX.Element => (

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { variables } from '../../styles';
 
 const StyledUl = styled.ul`
@@ -16,8 +17,12 @@ const StyledUl = styled.ul`
 const Navigation = (): JSX.Element => (
   <nav>
     <StyledUl>
-      <li>hej</li>
-      <li>tja</li>
+      <li>
+        <Link to="/">Start</Link>
+      </li>
+      <li>
+        <Link to="/testing">Testing</Link>
+      </li>
     </StyledUl>
   </nav>
 );
